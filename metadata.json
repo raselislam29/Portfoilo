@@ -1,0 +1,8 @@
+{
+  "name": "Nexus Portfolio - Rasel Islam Redesign",
+  "description": "A modern, highly interactive personal portfolio featuring a MERN stack showcase and an AI-powered assistant built with Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
