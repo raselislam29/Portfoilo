@@ -1,20 +1,120 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Rasel Islam — Cybersecurity Portfolio
 
-# Run and deploy your AI Studio app
+A modern, interactive portfolio website for **Rasel Islam**, an aspiring Cybersecurity Analyst focused on risk assessment, vulnerability management, and secure system design.
 
-This contains everything you need to run your app locally.
+This project showcases academic background, cybersecurity projects, certifications, technical skills, and contact information in a clean single-page experience.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Abw2afP2IMkj8DW9VdHdioLWTjkpJGxp
+---
 
-## Run Locally
+## About
 
-**Prerequisites:**  Node.js
+I’m currently pursuing a **B.S. in Computer Programming and Information Systems** at Farmingdale State College (SUNY), with a strong academic record and practical exposure to:
 
+- NIST-aligned security practices
+- Vulnerability scanning and remediation planning
+- Network and web application security testing
+- Security reporting and risk communication
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+
+## Highlights
+
+- **Cybersecurity-focused profile** with education, achievements, and goals
+- **Project showcase** featuring practical security work:
+  - Security risk assessment
+  - Vulnerability assessment lab
+  - Web application security testing
+- **Certification section** for completed and in-progress credentials
+- **Skills dashboard** covering security and technical tools
+- **AI-powered chat assistant** integration via Gemini API
+- **Responsive, modern UI** built with React + Vite + TypeScript
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, TypeScript, Vite
+- **Styling/UI:** Custom component-based architecture
+- **AI Integration:** Google Gemini API
+
+---
+
+## Project Structure
+
+```text
+.
+├── App.tsx
+├── constants.ts
+├── components/
+│   ├── About.tsx
+│   ├── Certifications.tsx
+│   ├── Contact.tsx
+│   ├── Education.tsx
+│   ├── Experience.tsx
+│   ├── Hero.tsx
+│   ├── Projects.tsx
+│   ├── Skills.tsx
+│   └── ...
+├── services/
+│   └── geminiService.ts
+├── index.tsx
+└── package.json
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (recommended)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### Run in Development
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+## Contact
+
+- **Name:** Rasel Islam
+- **Location:** Levittown, NY
+- **Email:** Studyrasel1@gmail.com
+- **GitHub:** https://github.com/raselislam29
+- **LinkedIn:** https://linkedin.com/in/raselislam29
+- **Resume:** https://drive.google.com/file/d/1yYTUKP1fr8FmNCOHGBdHEwPJKq562Qmf/view?usp=sharing
+
+---
+
+## Notes
+
+This repository is intended as a personal portfolio and learning showcase. You can fork and adapt the structure for your own portfolio site.
