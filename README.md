@@ -61,48 +61,7 @@ I’m currently pursuing a **B.S. in Computer Programming and Information System
 └── package.json
 ```
 
----
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ (recommended)
-- npm
-
-### Installation
-
-```bash
-npm install
-```
-
-### Environment Variables
-
-Create a `.env.local` file in the project root:
-
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-### Run in Development
-
-```bash
-npm run dev
-```
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
----
 
 ## Contact
 
