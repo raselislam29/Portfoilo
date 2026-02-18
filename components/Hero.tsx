@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="flex-1 w-full max-w-xl animate-in fade-in slide-in-from-right duration-1000">
-        <div className="glass-card rounded-[2rem] p-1 overflow-hidden shadow-2xl border-emerald-500/20 border group">
+        <div className="glass-card rounded-[2rem] p-1 overflow-hidden shadow-2xl border-emerald-500/20 border group relative">
           <div className="bg-slate-900/80 p-4 flex items-center justify-between border-b border-white/5">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
@@ -76,6 +76,12 @@ const Hero: React.FC = () => {
               <span className="text-blue-400">user</span>
               <span className="text-white animate-pulse">awaiting_deployment...</span>
             </div>
+          </div>
+          {/* Terminal Hint */}
+          <div className="absolute -bottom-10 left-0 w-full text-center">
+            <p className="text-[10px] text-gray-600 font-bold uppercase tracking-[0.2em] animate-pulse">
+              Tip: Access the Shell Terminal in the bottom right corner
+            </p>
           </div>
         </div>
       </div>

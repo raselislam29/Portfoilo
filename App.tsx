@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import ChatBot from './components/ChatBot';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Terminal from './components/Terminal';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -58,6 +59,7 @@ const App: React.FC = () => {
 
       <Footer />
       <ChatBot />
+      <Terminal />
       <ScrollToTop />
     </div>
   );
