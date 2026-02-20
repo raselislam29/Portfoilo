@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   linkedin: "https://linkedin.com/in/raselislam29",
   location: "Levittown, NY",
   phone: "516-828-0692",
-  resumeUrl: "https://drive.google.com/file/d/1yYTUKP1fr8FmNCOHGBdHEwPJKq562Qmf/view?usp=sharing"
+  resumeUrl: "https://drive.google.com/file/d/1hZlho-Q33jYZCMlXOjldVOc5MHJONqH8/view?usp=sharing"
 };
 
 export const EDUCATION = [
