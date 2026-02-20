@@ -48,7 +48,7 @@ const About: React.FC = () => {
             target="_blank" 
             className="inline-flex items-center gap-4 mt-10 px-10 py-5 bg-emerald-600 hover:bg-emerald-500 text-white font-black uppercase tracking-widest text-xs rounded-xl transition-all shadow-[0_10px_30px_rgba(16,185,129,0.3)] active:scale-95"
           >
-            Access Full Dossier (Resume) <i className="fa-solid fa-shield-halved"></i>
+            Access Full Resume <i className="fa-solid fa-shield-halved"></i>
           </a>
         </div>
       </div>
