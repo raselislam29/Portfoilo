@@ -84,9 +84,7 @@ export const CERTIFICATIONS = [
     date: "February 2026",
     image: "https://images.unsplash.com/photo-1510511459019-5dee997dd3db?auto=format&fit=crop&w=400&q=80",
     link: "http://linkedin.com/learning/certificates/83464510137c4e2785f2ca3ce7a23b5c5e146d73b0b36739f8fa4647631ef5bf?u=42267225",
-    description: "core concepts and functionalities of generative AI".
-      "the benefits of using Copilot for workflow automation."
-      "the ethical implications of deploying generative AI."
+    description: "core concepts and functionalities of generative AI."
   },
   {
     title: "Introduction to Cybersecurity",
