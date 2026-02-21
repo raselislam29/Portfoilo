@@ -82,7 +82,7 @@ export const CERTIFICATIONS = [
     title: "Career Essentials in Generative AI by Microsoft and LinkedIn",
     issuer: "Linkedin & Microsoft",
     date: "February 2026",
-    image: "https://images.unsplash.com/photo-1510511459019-5dee997dd3db?auto=format&fit=crop&w=400&q=80",
+    image: "https://drive.google.com/file/d/1sqQOzYl4ftSxKh2AEUi0RhHBAcL7V2GY/view?usp=sharing",
     link: "http://linkedin.com/learning/certificates/83464510137c4e2785f2ca3ce7a23b5c5e146d73b0b36739f8fa4647631ef5bf?u=42267225",
     description: "core concepts and functionalities of generative AI."
   },
