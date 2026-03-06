@@ -87,6 +87,14 @@ export const CERTIFICATIONS = [
     description: "core concepts and functionalities of generative AI."
   },
   {
+    title: "Career Essentials in Cybersecurity by Microsoft and LinkedIn",
+    issuer: "Linkedin & Microsoft",
+    date: "February 2026",
+    image: "https://drive.google.com/file/d/1sqQOzYl4ftSxKh2AEUi0RhHBAcL7V2GY/view?usp=sharing",
+    link: "https://www.linkedin.com/learning/certificates/075470363c8b97920e6602bcad8dd000c88c16798bc4ec8715c4bac3b45dd3ac?trk=share_certificate",
+    description: "An understanding of core cybersecurity concepts."
+  },
+  {
     title: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
     date: "June 2023",
