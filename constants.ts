@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     description: 'Conducted organization-wide cybersecurity risk assessment across infrastructure, applications, and data. Created a risk register with likelihood, impact, and mitigation strategies while mapping security gaps to NIST CSF and SOC 2 requirements.',
     tags: ['NIST CSF', 'SOC 2', 'Risk Management', 'Security Audit'],
     imageUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
-    githubUrl: 'https://github.com/raselislam29'
+    githubUrl: 'https://github.com/raselislam29/Security-Risk-Assessment-Project'
   },
   {
     id: '2',
