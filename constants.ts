@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     description: 'Built a PHP/MySQL application with intentional vulnerabilities (SQL injection, XSS). Used Burp Suite and OWASP ZAP to exploit flaws and implemented secure coding practices, documenting results in a security report.',
     tags: ['OWASP ZAP', 'Burp Suite', 'PHP', 'MySQL', 'Penetration Testing'],
     imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80',
-    githubUrl: 'https://github.com/raselislam29'
+    githubUrl: 'https://github.com/raselislam29/Web-Application-Security-Test'
   }
 ];
 
