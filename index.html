@@ -1,61 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rasel Islam | Portfolio</title>
+    <meta
+      name="description"
+      content="Rasel Islam is an aspiring Cybersecurity Analyst specializing in risk assessment, vulnerability management, NIST-aligned security strategy, and secure system design."
+    />
+    <meta
+      name="keywords"
+      content="Rasel Islam, Cybersecurity Analyst, NIST, Vulnerability Assessment, Security Portfolio, SOC 2, OWASP, Splunk, Nmap"
+    />
+    <meta name="author" content="Rasel Islam" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#020617" />
+    <link rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rasel Islam | Cybersecurity Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore cybersecurity case studies, certifications, and technical skills from aspiring Cybersecurity Analyst Rasel Islam."
+    />
+    <meta property="og:url" content="/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Rasel Islam | Cybersecurity Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Cybersecurity-focused portfolio with measurable project impact, certifications, and practical security experience."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rasel Islam",
+        "jobTitle": "Aspiring Cybersecurity Analyst",
+        "description": "Cybersecurity-focused student specializing in vulnerability assessment, risk management, and NIST-aligned defense strategies.",
+        "email": "mailto:Studyrasel1@gmail.com",
+        "telephone": "+1-516-828-0692",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Levittown",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://github.com/raselislam29",
+          "https://linkedin.com/in/raselislam29"
+        ]
+      }
+    </script>
     <style>
-        body {
-          font-family: 'Inter', sans-serif;
-          background-color: #020617;
-          color: #f8fafc;
-          scroll-behavior: smooth;
-        }
-        .fira { font-family: 'Fira Code', monospace; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #020617;
+        color: #f8fafc;
+        scroll-behavior: smooth;
+      }
+      .fira {
+        font-family: "Fira Code", monospace;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
 
-        .glass-card {
-          background: rgba(15, 23, 42, 0.6);
-          backdrop-filter: blur(16px);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
+      .glass-card {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
 
-        .gradient-text {
-          background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
+      .gradient-text {
+        background: linear-gradient(
+          135deg,
+          #60a5fa 0%,
+          #a855f7 50%,
+          #ec4899 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-        @keyframes blob {
-          0% { transform: translate(0px, 0px) scale(1); }
-          33% { transform: translate(50px, -70px) scale(1.2); }
-          66% { transform: translate(-40px, 30px) scale(0.8); }
-          100% { transform: translate(0px, 0px) scale(1); }
+      @keyframes blob {
+        0% {
+          transform: translate(0px, 0px) scale(1);
         }
-        .animate-blob { animation: blob 10s infinite alternate cubic-bezier(0.45, 0, 0.55, 1); }
+        33% {
+          transform: translate(50px, -70px) scale(1.2);
+        }
+        66% {
+          transform: translate(-40px, 30px) scale(0.8);
+        }
+        100% {
+          transform: translate(0px, 0px) scale(1);
+        }
+      }
+      .animate-blob {
+        animation: blob 10s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+      }
 
-        .nav-link::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: -4px;
-          left: 0;
-          background: #60a5fa;
-          transition: width 0.3s ease;
-        }
-        .nav-link:hover::after { width: 100%; }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: #60a5fa;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>

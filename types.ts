@@ -1,8 +1,12 @@
-
 export interface Project {
   id: string;
   title: string;
   description: string;
+  caseStudy?: {
+    challenge: string;
+    approach: string;
+    impact: string[];
+  };
   tags: string[];
   imageUrl: string;
   githubUrl: string;
@@ -13,7 +17,7 @@ export interface Skill {
   name: string;
   level: number;
   icon: string;
-  category: 'frontend' | 'backend' | 'tools' | 'database';
+  category: "frontend" | "backend" | "tools" | "database";
 }
 
 export interface Experience {
@@ -24,6 +28,6 @@ export interface Experience {
 }
 
 export interface ChatMessage {
-  role: 'user' | 'model';
+  role: "user" | "model";
   text: string;
 }

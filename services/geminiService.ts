@@ -1,6 +1,11 @@
-
 import { GoogleGenAI, Chat } from "@google/genai";
-import { PERSONAL_INFO, PROJECTS, SKILLS, EDUCATION, CERTIFICATIONS } from "../constants";
+import {
+  PERSONAL_INFO,
+  PROJECTS,
+  SKILLS,
+  EDUCATION,
+  CERTIFICATIONS,
+} from "../constants";
 
 const getSystemInstruction = () => {
   return `You are "Nexus Assistant", the AI persona of ${PERSONAL_INFO.name}. 
@@ -25,21 +30,31 @@ const getSystemInstruction = () => {
 export class GeminiService {
   private ai: GoogleGenAI;
   private chat: Chat | null = null;
+  private apiKey?: string;
 
   constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    this.apiKey = import.meta.env.VITE_API_KEY;
+    this.ai = new GoogleGenAI({ apiKey: this.apiKey || "" });
   }
 
   public async initChat() {
+    if (!this.apiKey) {
+      throw new Error("Missing VITE_API_KEY");
+    }
+
     this.chat = this.ai.chats.create({
-      model: 'gemini-3-flash-preview',
+      model: "gemini-3-flash-preview",
       config: {
         systemInstruction: getSystemInstruction(),
-      }
+      },
     });
   }
 
   public async sendMessage(message: string): Promise<string> {
+    if (!this.apiKey) {
+      return "Chat assistant is offline because VITE_API_KEY is not set. Add it in a .env file and restart the dev server.";
+    }
+
     if (!this.chat) {
       await this.initChat();
     }
