@@ -48,17 +48,6 @@ export const PROJECTS: Project[] = [
     title: "Security Risk Assessment Project",
     description:
       "Conducted organization-wide cybersecurity risk assessment across infrastructure, applications, and data. Created a risk register with likelihood, impact, and mitigation strategies while mapping security gaps to NIST CSF and SOC 2 requirements.",
-    caseStudy: {
-      challenge:
-        "No centralized method existed to prioritize cyber risks across systems and data assets.",
-      approach:
-        "Built a structured risk register, mapped controls to NIST CSF and SOC 2, and ranked findings by likelihood and business impact.",
-      impact: [
-        "Mapped 25+ controls to NIST CSF and SOC 2 domains",
-        "Prioritized top 10 high-risk findings for immediate remediation",
-        "Delivered an executive-ready risk summary in one reporting cycle",
-      ],
-    },
     tags: ["NIST CSF", "SOC 2", "Risk Management", "Security Audit"],
     imageUrl:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
@@ -90,17 +79,6 @@ export const PROJECTS: Project[] = [
     title: "Web Application Security Test",
     description:
       "Built a PHP/MySQL application with intentional vulnerabilities (SQL injection, XSS). Used Burp Suite and OWASP ZAP to exploit flaws and implemented secure coding practices, documenting results in a security report.",
-    caseStudy: {
-      challenge:
-        "The application intentionally contained exploitable flaws with no secure coding guardrails.",
-      approach:
-        "Executed attack scenarios in Burp Suite and OWASP ZAP, then implemented validation, sanitization, and parameterized query defenses.",
-      impact: [
-        "Verified exploitability of SQLi and XSS in controlled testing",
-        "Mitigated all high-severity findings in retest",
-        "Created a security report with reproducible test evidence",
-      ],
-    },
     tags: ["OWASP ZAP", "Burp Suite", "PHP", "MySQL", "Penetration Testing"],
     imageUrl:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
