@@ -1,99 +1,18 @@
-
-import React, { useState } from 'react';
-
-interface NavbarProps {
-  activeSection: string;
+﻿import { useEffect, useRef, useState } from 'react';
+import { PERSONAL_INFO } from '../constants';
+export default function Navbar({ activeSection }: { activeSection: string }) {
+  const [open, setOpen] = useState(false);
+  const toggle = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const close = (event: KeyboardEvent) => { if (event.key === 'Escape' && open) { setOpen(false); toggle.current?.focus(); } };
+    window.addEventListener('keydown', close); return () => window.removeEventListener('keydown', close);
+  }, [open]);
+  return <header className="site-header"><nav className="nav wrap" aria-label="Main navigation">
+    <a className="wordmark" href="#home" aria-label="Rasel Islam home">rasel<span>.</span></a>
+    <div id="navigation" className={`nav-links ${open ? 'is-open' : ''}`}>
+      {[['experience', 'Experience'], ['projects', 'Work'], ['about', 'About'], ['contact', 'Contact']].map(([id, label]) => <a key={id} href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined} onClick={() => setOpen(false)}>{label}</a>)}
+    </div>
+    <a className="nav-resume" href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+    <button ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="navigation" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? '✕' : '☰'}</button>
+  </nav></header>;
 }
-
-const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Edu', id: 'education' },
-    { name: 'Certs', id: 'certificates' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
-  ];
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
-    setIsOpen(false);
-  };
-
-  return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 glass-card rounded-2xl px-6 py-3 border border-emerald-500/10">
-      <div className="flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter">
-          <span className="text-white">RASEL</span>
-          <span className="text-emerald-500">.</span>
-        </div>
-
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <a 
-                href={`#${link.id}`}
-                onClick={(e) => handleNavClick(e, link.id)}
-                className={`relative text-[10px] font-black uppercase tracking-widest transition-all hover:text-white nav-link ${
-                  activeSection === link.id ? 'text-emerald-400' : 'text-gray-500'
-                }`}
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Action Button */}
-        <div className="flex items-center gap-4">
-          <a 
-            href="#contact" 
-            onClick={(e) => handleNavClick(e, 'contact')}
-            className="hidden md:block px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-black uppercase tracking-widest rounded-lg transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]"
-          >
-            Hire Analyst
-          </a>
-
-          {/* Mobile Toggle */}
-          <button className="lg:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
-            <i className={`fa-solid ${isOpen ? 'fa-xmark' : 'fa-bars-staggered'} text-xl`}></i>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full mt-4 glass-card rounded-2xl py-6 animate-in fade-in zoom-in duration-200">
-          <ul className="flex flex-col items-center gap-6">
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <a 
-                  href={`#${link.id}`}
-                  className={`text-sm font-black uppercase tracking-widest ${
-                    activeSection === link.id ? 'text-emerald-400' : 'text-white'
-                  }`}
-                  onClick={(e) => handleNavClick(e, link.id)}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
-};
-
-export default Navbar;

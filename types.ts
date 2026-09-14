@@ -4,16 +4,17 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
-  githubUrl: string;
+  imageUrl?: string;
+  githubUrl?: string;
+  kind: 'product' | 'security';
   liveUrl?: string;
 }
 
 export interface Skill {
   name: string;
-  level: number;
-  icon: string;
-  category: 'frontend' | 'backend' | 'tools' | 'database';
+  level?: number;
+  icon?: string;
+  category: 'primary' | 'secondary' | 'security';
 }
 
 export interface Experience {
@@ -21,6 +22,7 @@ export interface Experience {
   role: string;
   company: string;
   description: string;
+  highlights?: string[];
 }
 
 export interface ChatMessage {

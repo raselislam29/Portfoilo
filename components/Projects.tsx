@@ -1,86 +1,13 @@
-
-import React from 'react';
-import { PROJECTS } from '../constants';
-
-const Projects: React.FC = () => {
-  return (
-    <section id="projects" className="py-24">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter">Featured <span className="gradient-text">Analysis.</span></h2>
-        <p className="text-gray-400 max-w-xl mx-auto italic fira text-sm">"Data is a precious thing and will last longer than the systems themselves."</p>
+﻿import { PROJECTS } from '../constants';
+export default function Projects() {
+  return <section id="projects" className="section wrap"><div className="section-top"><div><p className="eyebrow">02 / SELECTED WORK</p><h2>From idea to working product.</h2></div><a className="text-link" href="https://github.com/raselislam29" target="_blank" rel="noreferrer">More on GitHub ↗</a></div>
+    <div className="project-grid">{PROJECTS.filter(p => p.kind === 'product').map((project, index) => <article className={`project-card project-${project.id}`} key={project.id}>
+      <div className="project-art" aria-hidden="true">
+        {index === 0 ? <div className="openmd-art"><div className="mock-top"><b>open<span>md</span></b><span>Care, connected.</span></div><div className="mock-body"><div className="mock-sidebar"><i /><i /><i /><i /></div><div className="mock-content"><span>WORKSPACE OVERVIEW</span><strong>A clearer view of care.</strong><div className="mock-tiles"><div>Practices<span>One workspace</span></div><div>Providers<span>Connected teams</span></div></div><div className="mock-row"><i /> Scheduling <span>→</span></div><div className="mock-row"><i /> Team & access <span>→</span></div></div></div></div> : index === 1 ? <div className="flat-art"><span className="mono">FINDMYFLAT</span><strong>Find a place.<br />Make it yours.</strong><div className="house-scene"><div className="building building-a" /><div className="building building-b" /><div className="building building-c" /><span className="map-pin">⌂</span></div><span className="mock-search">⌕ &nbsp; Your next neighborhood <b>↗</b></span></div> : <div className="water-art"><span className="mono">LITTLE REMINDERS. BETTER DAYS.</span><div className="water-drop" /><strong>A moment to recharge.</strong><span className="reminder-pill">Time for a water break <span>↗</span></span></div>}
+        <span className="preview-label">UI CONCEPT</span>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PROJECTS.map((project) => (
-          <div 
-            key={project.id} 
-            className="group glass-card rounded-3xl overflow-hidden border border-white/5 hover:border-emerald-500/50 transition-all duration-500 flex flex-col h-full transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/10"
-          >
-            <div className="relative h-52 overflow-hidden">
-              <img 
-                src={project.imageUrl} 
-                alt={project.title} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                <a 
-                  href={project.githubUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all transform hover:-translate-y-1"
-                >
-                  <i className="fa-brands fa-github text-xl"></i>
-                </a>
-                {project.liveUrl && (
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white text-black rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all transform hover:-translate-y-1"
-                  >
-                    <i className="fa-solid fa-link text-xl"></i>
-                  </a>
-                )}
-              </div>
-            </div>
-            
-            <div className="p-7 flex-1 flex flex-col">
-              <h3 className="text-xl font-black mb-3 text-white group-hover:text-emerald-400 transition-colors tracking-tight">
-                {project.title}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
-                {project.description}
-              </p>
-              
-              <div className="mb-6 pt-4 border-t border-white/5">
-                <p className="text-[10px] text-emerald-500/70 uppercase tracking-[0.2em] font-black mb-3 fira underline decoration-emerald-500/20 underline-offset-4">
-                  Tech Stack
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <span 
-                      key={tag} 
-                      className="px-2 py-1 bg-emerald-500/5 text-emerald-400 text-[10px] font-bold rounded border border-emerald-500/10 fira hover:bg-emerald-500/20 group-hover:border-emerald-500/30 transition-all"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-auto pt-4 flex justify-between items-center text-[10px] uppercase tracking-widest font-black text-gray-500">
-                <span className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Analysis Ready
-                </span>
-                <i className="fa-solid fa-chevron-right text-emerald-500 group-hover:translate-x-2 transition-transform"></i>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default Projects;
+      <div className="project-body"><div className="project-kicker">{index === 0 ? 'HEALTHCARE PLATFORM · SENIOR CAPSTONE' : index === 1 ? 'WEB APPLICATION' : 'DESKTOP APPLICATION'}</div><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.githubUrl} target="_blank" rel="noreferrer">View code <span aria-hidden="true">↗</span></a>{project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer">Live site ↗</a>}</div></div>
+    </article>)}</div>
+    <details className="supporting-work"><summary>Also explored <span>Security & risk assessment</span><span aria-hidden="true">+</span></summary><div className="supporting-grid">{PROJECTS.filter(p => p.kind === 'security').map(p => <article key={p.id}><h3>{p.title}</h3><p>{p.description}</p>{p.githubUrl && <a className="text-link" href={p.githubUrl} target="_blank" rel="noreferrer">View code ↗</a>}</article>)}</div></details>
+  </section>;
+}

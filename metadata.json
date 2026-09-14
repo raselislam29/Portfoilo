@@ -1,8 +1,1 @@
-{
-  "name": "Nexus Portfolio - Rasel Islam Redesign",
-  "description": "A modern, highly interactive personal portfolio featuring a MERN stack showcase and an AI-powered assistant built with Gemini.",
-  "requestFramePermissions": [
-    "camera",
-    "microphone"
-  ]
-}
+﻿{"name":"Rasel Islam Portfolio","description":"Software Developer at United Medical Monitoring. Backend APIs, cloud-integrated workflows, and full-stack healthcare products.","requestFramePermissions":[]}
