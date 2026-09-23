@@ -1,4 +1,4 @@
-﻿import { Project, Skill, Experience } from './types';
+import { Project, Skill, Experience } from './types';
 export const PERSONAL_INFO = {
   name: 'Rasel Islam', title: 'Software Developer', company: 'United Medical Monitoring',
   bio: 'I build backend APIs, asynchronous workflows, and cloud-integrated systems at United Medical Monitoring. My work connects Python and FastAPI with Azure SQL, background processing, and AI services to make everyday operations work better.',
@@ -26,8 +26,9 @@ export const EDUCATION = [
   { institution: 'Nassau Community College', location: 'Garden City, NY', degree: 'Associate of Applied Science in Information Technology', period: 'May 2024', gpa: '3.84/4 (Magna Cum Laude)', recognition: 'Magna Cum Laude', coursework: [] },
 ];
 export const CERTIFICATIONS = [
-  { title: 'CompTIA Security+', issuer: 'CompTIA', date: 'April 2026', link: '', description: 'Security foundations that inform how I design and build software.' },
-  { title: 'Career Essentials in Cybersecurity', issuer: 'Microsoft & LinkedIn', date: 'February 2026', link: '', description: 'A practical foundation in cybersecurity concepts and practices.' },
+  { title: 'CompTIA Security+', issuer: 'CompTIA', date: 'April 2026', link: 'https://drive.google.com/file/d/1jIeGjrn8yLu2uKzd4fdnJKlUoU3FsoHA/view?usp=sharing', description: 'Security foundations that inform how I design and build software.' },
+  { title: 'Career Essentials in Cybersecurity', issuer: 'Microsoft & LinkedIn', date: 'February 2026', link: 'https://www.linkedin.com/learning/certificates/075470363c8b97920e6602bcad8dd000c88c16798bc4ec8715c4bac3b45dd3ac', description: 'A practical foundation in cybersecurity concepts and practices.' },
+  { title: 'Career Essentials in Generative AI', issuer: 'Microsoft & LinkedIn', date: 'February 2026', link: 'https://www.linkedin.com/learning/certificates/83464510137c4e2785f2ca3ce7a23b5c5e146d73b0b36739f8fa4647631ef5bf', description: 'Core concepts and practical uses of generative AI.' },
   { title: 'Google Cybersecurity Certificate', issuer: 'Google / Coursera', date: 'October 2023', link: 'https://drive.google.com/file/d/1obKlr-Zkltk73p6uE1m0Cfrl4Gz5Esps/view?usp=sharing', description: 'Cybersecurity foundations, threat intelligence, and SIEM experience.' },
   { title: 'Google Data Analytics Professional', issuer: 'Google / Coursera', date: 'May 2023', link: 'https://drive.google.com/file/d/19JYS2J9RpGFIkHOnL3feEJKHMTdkl0x6/view?usp=sharing', description: 'Data cleaning, SQL, R, and visualization.' },
 ];
