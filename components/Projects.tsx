@@ -1,4 +1,5 @@
-﻿import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants';
+const KIND_LABEL = { product: 'PRODUCT', app: 'APPLICATION', security: 'SECURITY', data: 'DATA ANALYSIS' };
 export default function Projects() {
   return <section id="projects" className="section wrap"><div className="section-top"><div><p className="eyebrow">02 / SELECTED WORK</p><h2>From idea to working product.</h2></div><a className="text-link" href="https://github.com/raselislam29" target="_blank" rel="noreferrer">More on GitHub ↗</a></div>
     <div className="project-grid">{PROJECTS.filter(p => p.kind === 'product').map((project, index) => <article className={`project-card project-${project.id}`} key={project.id}>
@@ -8,6 +9,7 @@ export default function Projects() {
       </div>
       <div className="project-body"><div className="project-kicker">{index === 0 ? 'HEALTHCARE PLATFORM · SENIOR CAPSTONE' : index === 1 ? 'WEB APPLICATION' : 'DESKTOP APPLICATION'}</div><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="project-links"><a href={project.githubUrl} target="_blank" rel="noreferrer">View code <span aria-hidden="true">↗</span></a>{project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer">Live site ↗</a>}</div></div>
     </article>)}</div>
-    <details className="supporting-work"><summary>Also explored <span>Security & risk assessment</span><span aria-hidden="true">+</span></summary><div className="supporting-grid">{PROJECTS.filter(p => p.kind === 'security').map(p => <article key={p.id}><h3>{p.title}</h3><p>{p.description}</p>{p.githubUrl && <a className="text-link" href={p.githubUrl} target="_blank" rel="noreferrer">View code ↗</a>}</article>)}</div></details>
+    <div className="more-projects"><div className="more-heading"><p className="eyebrow">MORE PROJECTS</p><span>Apps, security labs, and data analysis</span></div>
+      <div className="more-grid">{PROJECTS.filter(p => p.kind !== 'product').map(p => <article className="more-card" key={p.id}><span className="project-kicker">{KIND_LABEL[p.kind]}</span><h3>{p.title}</h3><p>{p.description}</p><div className="tags">{p.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{p.githubUrl && <a className="text-link" href={p.githubUrl} target="_blank" rel="noreferrer">View code <span aria-hidden="true">↗</span></a>}</article>)}</div></div>
   </section>;
 }

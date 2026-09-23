@@ -6,7 +6,7 @@ export interface Project {
   tags: string[];
   imageUrl?: string;
   githubUrl?: string;
-  kind: 'product' | 'security';
+  kind: 'product' | 'app' | 'security' | 'data';
   liveUrl?: string;
 }
 

@@ -26,7 +26,7 @@ export default function App() {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
     }), { threshold: 0.12 });
-    document.querySelectorAll('main > section:not(.hero), .project-card, .education-card, .cert-card').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+    document.querySelectorAll('main > section:not(.hero), .project-card, .more-card, .education-card, .cert-card').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
     return () => observer.disconnect();
   }, []);
   return <><a className="skip-link" href="#main">Skip to content</a><Navbar activeSection={activeSection} /><main id="main"><Hero /><Experience /><Projects /><About /><Education /><Certifications /><Contact /></main><Footer /><ChatBot /></>;

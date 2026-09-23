@@ -1,12 +1,17 @@
-﻿import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 import Contact from '../components/Contact';
-import { PERSONAL_INFO } from '../constants';
+import { PERSONAL_INFO, PROJECTS } from '../constants';
 
 afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 describe('portfolio navigation and contact', () => {
+  it('shows every project without hiding any behind a toggle', () => {
+    const { container } = render(<App />);
+    for (const p of PROJECTS) expect(screen.getByRole('heading', { level: 3, name: p.title })).toBeVisible();
+    expect(container.querySelector('#projects details')).toBeNull();
+  });
   it('renders the career content and resolves every page anchor', () => {
     const { container } = render(<App />);
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Thoughtful code.');
