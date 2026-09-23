@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -20,6 +20,14 @@ export default function App() {
     };
     update(); window.addEventListener('scroll', update, { passive: true });
     return () => window.removeEventListener('scroll', update);
+  }, []);
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('main > section:not(.hero), .project-card, .education-card, .cert-card').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+    return () => observer.disconnect();
   }, []);
   return <><a className="skip-link" href="#main">Skip to content</a><Navbar activeSection={activeSection} /><main id="main"><Hero /><Experience /><Projects /><About /><Education /><Certifications /><Contact /></main><Footer /><ChatBot /></>;
 }
