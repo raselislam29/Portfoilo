@@ -1,10 +1,11 @@
-﻿import { PERSONAL_INFO } from '../constants';
+import { PERSONAL_INFO } from '../constants';
+import SocialLinks from './SocialLinks';
 export default function Hero() {
   return <section id="home" className="hero wrap">
     <div className="hero-copy"><div className="eyebrow"><span className="status-dot" /> SOFTWARE DEVELOPER · NEW YORK</div>
       <h1>Thoughtful code.<br /><em>Real-world</em><br />impact.</h1>
       <p className="intro">I’m Rasel. I build the APIs, workflows, and web experiences that help healthcare teams get things done.</p>
-      <div className="hero-actions"><a className="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a className="text-link" href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a></div>
+      <div className="hero-actions"><a className="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a className="text-link" href={PERSONAL_INFO.resumeUrl} target="_blank" rel="noreferrer">View résumé <span aria-hidden="true">↗</span></a><SocialLinks /></div>
       <div className="current-role"><span className="role-mark" aria-hidden="true">+</span><div><span>Currently building at</span><strong>{PERSONAL_INFO.company}</strong></div><span className="role-arrow" aria-hidden="true">↗</span></div>
     </div>
     <div className="system-stage" aria-label="Illustration of my backend focus: REST APIs, asynchronous jobs, databases, and cloud integrations">

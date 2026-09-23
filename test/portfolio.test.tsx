@@ -7,6 +7,11 @@ import { PERSONAL_INFO, PROJECTS } from '../constants';
 
 afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 describe('portfolio navigation and contact', () => {
+  it('links to GitHub and LinkedIn from the hero and footer', () => {
+    render(<App />);
+    expect(screen.getAllByRole('link', { name: 'GitHub' }).map(a => a.getAttribute('href'))).toEqual([PERSONAL_INFO.github, PERSONAL_INFO.github]);
+    expect(screen.getAllByRole('link', { name: 'LinkedIn' }).map(a => a.getAttribute('href'))).toEqual([PERSONAL_INFO.linkedin, PERSONAL_INFO.linkedin]);
+  });
   it('shows every project without hiding any behind a toggle', () => {
     const { container } = render(<App />);
     for (const p of PROJECTS) expect(screen.getByRole('heading', { level: 3, name: p.title })).toBeVisible();
